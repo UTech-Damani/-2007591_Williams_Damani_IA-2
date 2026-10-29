@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Sets the title displayed on the browser tab -->
+        <title>Coding Conf</title>
+
+        <!-- Links the external CSS stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Imports Font Awesome icons for the website -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!-- Sets the website's favicon (small icon in the browser tab) -->
+        <link rel="icon" type="image/png" href="../assets/cloud-bolt-Orange.png">
+
+        <!-- Loads the JavaScript validation file -->
+        <script src="../js/validation.js" defer> </script>
+
+        <!-- Loads the JavaScript account verification file for checking existing account-->
+        <script src="../js/accountVerification.js" defer></script>
+
+    </head>
+
+     <!-- Applies the main body class and a fixed gradient background using inline css -->
+    <body class="Main-Body" style="background: linear-gradient(135deg,#FF6A00 -10%, #1A0B2E 30%, #4B0082 70%, #FF6A00 120%); background-attachment: fixed; background-repeat: no-repeat;">
+
+        <!--Creating a class for the main header of the page-->
+        <header class="Main-Header">
+            
+            <!--Construction/Design of the navigation bar begins here-->
+            <nav>
+
+                <!--First set of unordered list which contains the logo and Event navigation-->
+                <ul>
+                    <!--List items-->
+                    <li id="Logo"> <a href="index.html" target="_self" style="text-decoration: none;"><i class="fa-solid fa-cloud-bolt" style="color: #FF6A00; margin-right: 5px;"></i>Coding Conf</a></li>
+                    <li> <a href="index.html#Start"> Events</a></li>
+                    
+                </ul>
+
+                <!--Second set of unordered list which contains the search (non functioning) and a profile Icon-->
+               <ul class="Right-Nav">
+                    <!--List items-->
+                    <!-- User icon -->
+                    <li> <button style="cursor: pointer;" onclick="validateAcc()"> <i class="fa-solid fa-user nav-icon"></i></button> </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!--The main body/middle section of the page starts here-->
+        <main>
+            <!-- Section containing the registration form -->
+            <section>
+
+                <!-- Arranges the logo, heading, description, and form vertically -->
+                <div class="FormOrientation">
+
+                    <!-- Displays the Coding Conf logo and conference name -->
+                    <div class="Logo">
+                        <!-- Font Awesome cloud icon -->
+                        <i class="fa-solid fa-cloud-bolt"></i>
+
+                        <!-- Conference name displayed beside the logo -->
+                        <span>Coding Conf</span>
+                    </div>
+
+                    <!-- Displays the main heading and introductory message -->
+                    <div>
+                        <h1 style="color: white; font-size: 45px;">Your Journey to Coding Conf <br> 2026 Starts Here!</h1>
+
+                        <p style="color: silver; font-size: 15px; word-spacing: 4px;">Secure your spot at your next year's biggest coding conference</p>
+                    </div>
+
+                     <!-- Container for the attendee registration form -->
+                    <div class="FormBody">
+                        <form name="Register" method="get" id="Registration-Form" onsubmit="return false">
+
+                            <!-- Label and file input for uploading an attendee's avatar -->
+                            <label>Upload Avatar</label>
+                            <input type="file" name="Pfp" id="Pfp" style="border: 1px dashed; height: 90px; background: linear-gradient(to right, #554477, #6B568A);" accept="image/jpeg,image/png">
+                            <small style="color: white;">ⓘ Upload your photo (JPG or PNG, max size: 5MB).</small>
+
+                            <!-- Displays validation errors related to the avatar -->
+                            <p id="error4" class="error"></p>
+
+                            <!-- Label and text input for the attendee's full name -->
+                            <label>Full Name</label>
+                            <input type="text" name="name" id="Fname" placeholder="eg.. Tim Duncan" style="background: linear-gradient(to right, #554477, #6B568A);">
+
+                            <!-- Displays validation errors related to the full name -->
+                            <p id="error2" class="error"></p>
+
+                             <!-- Label and email input for the attendee's email address -->
+                            <label>Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="example@email.com" style="background: linear-gradient(to right, #554477, #6B568A);">
+
+                            <!-- Displays validation errors related to the email address -->
+                            <p id="error3" class="error"></p>
+
+                            <!-- Label and text input for the attendee's GitHub username -->
+                            <label>GitHub Username</label>
+                            <input type="text" name="gitname" id="gitname" placeholder="@yourusername" style="background: linear-gradient(to right, #554477, #6B568A);">
+                            
+                            <!-- Displays validation errors related to the GitHub username -->
+                            <p id="error1" class="error"></p>
+
+                            <!-- Dropdown menu allowing the attendee to select an event -->
+                            <label>Events</label>
+                            <select name="EventType" id="events" style="height: 30px; font-weight: bolder; background: linear-gradient(135deg,#000000 0%, #4B0082 50%, #FF6A00 100%); color: #FF6A00; border-radius: 7px; padding-left: 9px;">
+                                <option value="Hackathons">Hackathons</option>
+                                <option value="Coding-Workshop">Coding Workshops</option>
+                                <option value="Tech-Talks">Tech Talks</option>
+                                <option value="Project-Showcase">Project Showcase</option>
+                            </select>
+
+                            <!-- Button calls the validate() JavaScript function when clicked -->
+                            <input type="button" value="Generate My Ticket" id="Generate-Ticket" style="background-color: #FF6A00; margin-bottom: 90px; height: 50px; cursor: pointer;" onclick="validate()">
+
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+            
+
+        </main>
+
+    </body>

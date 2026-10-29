@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Sets the title displayed on the browser tab -->
+        <title>Coding Conf</title>
+
+        <!-- Links the external CSS stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Imports Font Awesome icons for the website -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!-- Sets the website's favicon (small icon in the browser tab) -->
+        <link rel="icon" type="image/png" href="../assets/cloud-bolt-Orange.png">
+
+        <!-- Loads the JavaScript validation file-->
+        <script src="../js/index.js" defer> </script>
+
+        <!-- Loads the JavaScript account verification file for checking existing account-->
+        <script src="../js/accountVerification.js" defer></script>
+
+    </head>
+
+    
+    <!-- Main body with a fixed gradient background transitioning between orange and purple -->
+    <body class="Main-Body" style="background: linear-gradient(135deg,#FF6A00 -10%, #1A0B2E 30%, #4B0082 70%, #FF6A00 120%); background-attachment: fixed; background-repeat: no-repeat;">
+        
+        <header class="Main-Header">
+
+            <!-- Navigation menu containing the logo and page links -->
+            <nav>
+
+                <!-- Left navigation menu containing the logo and Events link -->
+                <ul>
+                    <!-- Website logo linking back to the home page -->
+                    <li id="Logo"> <a href="index.html" target="_self" style="text-decoration: none;"><i class="fa-solid fa-cloud-bolt" style="color: #FF6A00; margin-right: 5px;"></i>Coding Conf</a></li>
+
+                    <!-- Link to the Events section on the home page -->
+                    <li> <a href="index.html#Start"> Events</a></li>
+                    
+                </ul>
+
+               <!-- Right navigation menu containing search and user icons -->
+               <ul class="Right-Nav">
+                    <!-- Search icon -->
+                    <li><i class="fa-solid fa-magnifying-glass nav-icon"></i></li>
+                    <!-- User icon -->
+                    <li> <button style="cursor: pointer;" onclick="validateAcc()"> <i class="fa-solid fa-user nav-icon"></i></button> </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- Main content area displaying the registration confirmation and ticket -->
+        <main>
+            <!-- Section displaying the conference logo, heading, and confirmation message -->
+            <section>
+                <div class="FormOrientation">
+                    <!-- Displays the Coding Conf logo and conference name -->
+                    <div class="Logo">
+                        <i class="fa-solid fa-cloud-bolt"></i>
+                        <span>Coding Conf</span>
+                    </div>
+
+                    <!-- Main heading displayed above the generated ticket -->
+                    <div>
+                        <h1 style="color: white; font-size: 45px;" id="Congrats">Your Journey to Coding Conf <br> 2026 Starts Here!</h1>
+
+                        <!-- Empty paragraph where JavaScript can display a confirmation message -->
+                        <p style="color: silver; font-size: 15px; word-spacing: 4px;" id="Confirmation"></p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Ticket container displaying the event and attendee information -->
+            <section class="Ticket">
+                <div>
+                    <!-- Displays the conference logo and name on the ticket -->
+                    <div style="display: flex; flex-direction: row; gap: 11px; padding-top: 23px;">
+                        <i class="fa-solid fa-cloud-bolt" style="color:#FF6A00; font-size: 25px;"></i>
+                        <span style="color: white; font-size: 25px;">Coding Conf</span>
+                    </div>
+
+                    <!-- Displays the event date, location, and event details -->
+                    <div>
+                        <p style="color: silver;" id="Event">January 31, 2027  /  Kingston, JA -  event</p>
+                    </div>
+
+                    <!-- Container holding the attendee's profile picture and personal details -->
+                    <div id="CustDetails">
+                        <div>
+                            <!-- Profile picture displayed on the generated ticket -->
+                            <img src="/2007591_Individual_Assignment_2/assets/ProfileSS.png" alt="No Image found" style="height: 60px; width: 60px; margin-top: 10px;" id="ProfilePic">
+                        </div>
+                        <!-- Displays the attendee's name and GitHub username -->
+                        <div style="padding-top: 18px; ">
+                            <div>
+                                <!-- JavaScript can replace this placeholder with the attendee's full name -->
+                                <span style="color: white; font-size: 20px;" id="ticketName">Name</span>
+                            </div>
+                            
+                            <!-- Displays the GitHub icon and attendee's GitHub username -->
+                            <div style="display: flex; flex-direction: row; gap: 10px; padding-top: 6px;">
+                                <i class="fa-brands fa-github" style="font-size: 13px; color: white; border: 3px solid white;"></i>
+                                <!-- JavaScript can replace this placeholder with the saved GitHub username -->
+                                <span style="color: silver;" id="ticketEmail">GitHub Name</span>
+                            </div>
+                             
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket's right-hand section, separated by a dashed vertical border -->
+                <div style="border-left: 2px dashed whitesmoke; margin-left: 60px;">
+                    <!-- Displays the generated ticket number -->
+                    <span id="TicketNo">#</span>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+
+
+</html>
