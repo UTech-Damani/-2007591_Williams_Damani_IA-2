@@ -1,6 +1,8 @@
 
 function validate(){
 
+    //Clear the data stored in the session if the user wishes to register again
+    sessionStorage.clear();
     // Clear previous error messages before validating again
     document.getElementById("error1").innerHTML = "";
     document.getElementById("error2").innerHTML = "";
