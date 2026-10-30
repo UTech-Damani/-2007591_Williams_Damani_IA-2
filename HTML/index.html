@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Sets the title displayed on the browser tab -->
+        <title>Coding Conf</title>
+
+        <!-- Links the external CSS stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Imports Font Awesome icons for the website -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!-- Sets the website's favicon (small icon in the browser tab) -->
+        <link rel="icon" type="image/png" href="../assets/cloud-bolt-Orange.png">
+
+        <!-- Loads the JavaScript account verification file for checking existing account-->
+        <script src="../js/accountVerification.js" defer></script>
+
+    </head>
+
+    
+    <!-- Main body of the website -->
+    <body class="Main-Body">
+        <!-- Header containing the website navigation -->
+        <header class="Main-Header">
+
+            <!-- Navigation bar for moving around the website -->
+            <nav>
+
+                <!-- Left navigation menu containing the logo and page links -->
+                <ul>
+                    <!-- Website logo linking back to the home page -->
+                    <li id="Logo"> <a href="index.html" target="_self" style="text-decoration: none;"><i class="fa-solid fa-cloud-bolt" style="color: #FF6A00; margin-right: 5px;"></i>Coding Conf</a></li>
+                    <!-- Link to the Events section -->
+                    <li><a href="#Start">Events</a></li>
+                    <!-- Link to the How to Register section -->
+                    <li><a href="#HowTo">How to Register</a></li>
+                </ul>
+
+               <!-- Right navigation menu containing search and user icons -->
+               <ul class="Right-Nav">
+                    <!-- User icon linking to the registration instructions if no account has been created-->
+                    <li> <button style="cursor: pointer;" onclick="validateAcc()"> <i class="fa-solid fa-user nav-icon"></i></button> </li>
+                </ul>
+
+            </nav>
+
+            
+            
+        </header>
+
+        
+
+        <!-- Main content of the website -->
+        <main>
+            <!-- Hero section displaying the main introduction -->
+            <section style="padding-bottom: 120px; height: 70vh; ">
+
+                <!-- Container for the hero section content and background -->
+                <div class="Sec1">
+                    
+                    <!-- Main heading, introductory text, and Explore link -->
+                    <div class="S1-Content">
+                        <h1>CODE THE FUTURE.</h1>
+                        <p>
+                            Turn bold ideas into groundbreaking technology.  <br> Join the next generation of developers, innovators, and problem-solvers.
+                        </p>
+
+                        <!-- Link that takes users to the Events section -->
+                        <a href="#Start" style="text-decoration: none;"><span>Explore</span></a>
+                        
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Events section displaying the hackathon images -->
+            <section style="background-color: #1C1C1C; min-height: 70vh">
+
+                <!-- Main heading and anchor target for the Events section -->
+                <h1 class="MainHeading" id="Start">Events</h1>
+
+                <div class="Events">
+                    <!-- Heading for the Hackathons event category -->
+                    <h1 style="color: white;" id="Hack">HACKATHONS</h1>
+
+                    <!-- Container displaying the four hackathon images -->
+                    <div class="Hackathons">
+                        <div>
+                            <img src="/2007591_Individual_Assignment_2/assets/Hackathon Panel 1.png" alt="Image not found">  
+                        </div>
+
+                        <div>
+                            <img src="/2007591_Individual_Assignment_2/assets/Hackathon Panel 2.png" alt="Image not found"> 
+                        </div>
+
+                        <div>
+                            <img src="/2007591_Individual_Assignment_2/assets/Hackathon Panel 3.png" alt="Image not found"> 
+                        </div>
+
+                        <div>
+                            <img src="/2007591_Individual_Assignment_2/assets/Hackathon Panel 4.png" alt="Image not found"> 
+                        </div>
+                    </div>
+
+
+                </div>
+                
+            </section>
+                
+            <!-- Section displaying coding workshops and project showcases -->
+            <section style="background-color: #1C1C1C;">
+                <div class="Events">
+
+                    <!-- Flex container displaying two event cards side by side -->
+                    <div class="SecondEvents">
+                        <div>
+                            <!-- Image representing the coding workshops -->
+                            <img src="/2007591_Individual_Assignment_2/assets/Workshop.jfif" alt="Image not found" id="WorkShp">  
+
+                            <!-- Coding workshops heading -->
+                            <h1 style="color: white;">Coding Workshops</h1>
+                            <!-- Description of the workshop activities -->
+                            <p>Hands-on sessions in HTML, CSS, JavaScript, Java, Python, and app <br>development. </p>
+                        </div>
+
+                        <div>
+                            <!-- Image representing project showcases -->
+                            <img src="/2007591_Individual_Assignment_2/assets/ProjectShowcase.jfif" alt="Image not found" id="Project">
+
+                            <!-- Project showcases heading -->
+                            <h1 style="color: white;" >Project Showcases</h1>
+
+                            <!-- Description of the projects presented -->
+                            <p>Developers demonstrate websites, mobile apps, games, and innovative <br> software projects.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+            </section>
+
+            <!-- Section displaying Tech Talks and the registration button -->
+            <section style="background-color: #1C1C1C; padding-bottom: 40px;">
+                <div class="Events">
+
+                    <!-- Container holding the Tech Talks event card -->
+                    <div class="SecondEvents">
+                        <div>
+                            
+                            <img src="/2007591_Individual_Assignment_2/assets/TechTalks.jfif" alt="Image not found" id="Tech">  
+
+                            <h1 style="color: white;" >Tech Talks</h1>
+
+                            <p>Speakers discuss AI, cybersecurity, software engineering, and emerging technologies.</p>
+                        </div>
+        
+                    </div>
+
+                </div>
+
+                <!-- Event metadata -->
+
+                <div style="display: flex; justify-content: center; " >
+                    <span id="MetaDate">Date: October 26, 2026 <br>Location: Papine, Kgn </span>
+                </div>
+                
+                
+                <!-- Registration button aligned to the right side of the section -->
+                <div style="display: flex; justify-content: right;" id="RegBtn">
+                    <!-- Link that takes users to the login/registration page -->
+                    <a href="login.html" target="_self"><span class="RegisterBtn">REGISTER NOW!</span></a>
+                </div>
+                
+            </section>
+
+        </main>
+
+
+        <!-- Footer containing registration instructions, event links, and copyright information -->
+        <footer>
+            <!-- Container arranging the footer content into columns -->
+            <div class="FooterB">
+                
+                <div>
+                    <!-- Instructions explaining how to register -->
+                    <dl>
+                        <!-- Anchor target for the How to Register navigation link -->
+                        <dt id="HowTo">How to register</dt>
+                        <dd>Step 1: Click on the "REGISTER NOW!" button</dd>
+                        <dd>Step 2: Create a profile</dd>
+                        <dd>Step 3: Select an Event</dd>
+                        <dd>Step 4: Click generate Ticket</dd>
+                        <dd>Step 5: All done! Wait for an advisor to reach out!</dd>
+                    </dl>
+                </div>
+
+                <!-- Footer column containing links to individual event categories -->
+                <div>
+                    <!--Description List containing varoius events-->
+                    <dl>
+                        <dt>Events</dt>
+                        
+                        <dd><a href="#Tech"> Tech Talks</a></dd>
+                        <dd><a href="#Project"> Project Showcase</a></dd>
+                        <dd><a href="#Hack"> Hackathons</a></dd>
+                        <dd><a href="#WorkShp"> Coding Workshop</a></dd>
+                        
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Horizontal line separating the footer columns from the copyright notice -->
+            <hr>
+
+            <!-- Copyright notice displaying the year and my name -->
+            <p style="color: white;">&copy; 2026 Damani Williams. All Rights Reserved.</p>
+            
+        </footer>
+
+
+
+
+    </body>
+
+
+
+</html>
