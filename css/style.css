@@ -1,0 +1,429 @@
+/* Set the default margin and font for the main body */
+.Main-Body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Enable smooth scrolling when navigating between sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS custom properties to avoid repetition of frequently used colors */
+:root {
+    --orange: #FF6A00;
+    --purple: #4B0082;
+    --dark: #1C1C1C;
+    --white: #FFFFFF;
+}
+
+/* Style the header */
+.Main-Body header{
+    display: flex;
+    background-color: #1C1C1C;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* This selects navigation links that are not currently being hovered over. */
+.Main-Header nav a:not(:hover) {
+    text-decoration: none;
+}
+
+/* Add an outline when a navigation link is focused using the keyboard */
+.Main-Header nav a:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 5px;
+}
+
+/* Remove underlines and set navigation link colours */
+.Main-Header nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Style navigation links when the mouse hovers over them */
+.Main-Header :is(nav ul li a):hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--white);
+}
+
+/* Style the website logo text */
+#Logo{
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    top: -0.25rem;
+}
+
+/* Arrange the navigation elements horizontally */
+.Main-Body nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+    height: 3.9rem;  
+    width: 99%;
+}
+
+/* Align the right-side navigation links */
+.Right-Nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3%;
+}
+
+/* Style the right-side navigation list items */
+.Right-Nav li{
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+/* Remove list markers and arrange navigation links in a row */
+.Main-Body nav ul{
+    margin-top: 1.4rem;
+    list-style: none;
+    display: flex;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    font-size: 0.95rem;
+}
+
+/* Index page design */
+/* Style the first section with a gradient background*/
+.Sec1{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 6%;
+    background: linear-gradient(135deg,#000000 0%, #4B0082 50%, #FF6A00 100%);
+    flex-wrap: wrap;
+}
+
+:where(.S1-Content p, .SecondEvents p) {
+    line-height: 1.5;
+}
+
+/* Style and position the content inside the first section */
+.S1-Content{
+    
+    text-align: left;
+    padding: 5% 2% 2% 5%;
+    font-family: "Inter", sans-serif;
+    
+}
+
+/* Style the main heading in the first section */
+.S1-Content h1{
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--white);
+}
+
+/* Style the paragraph in the first section */
+.S1-Content p{
+    margin-bottom: 3rem;
+    color: var(--white);
+}
+
+/* Style the clickable span in the first section */
+.S1-Content span{
+    border: 2px solid black;
+    padding: 0.75rem 1.8rem;
+    margin-top: 3rem;
+    margin-left: 0.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: #1C1C1C;
+    color: var(--white);
+    font-weight: bolder;
+}
+
+/* Change the span's appearance when hovered over */
+.S1-Content span:hover{
+    text-decoration: none;
+    transition-duration: 0.8s;
+    color: black;
+    background-color: var(--white);
+}
+
+/* Centre the main heading and set its colour */
+.MainHeading{
+    text-align: center; 
+    justify-content: center; 
+    color: var(--white);
+    padding-top: 1%;
+}
+
+/* Arrange hackathon cards horizontally and centre them */
+.Hackathons{
+    display: flex;
+    flex: 1;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    
+}
+
+/* Set the size and appearance of hackathon images */
+.Hackathons div img{
+    height: auto;
+    width: 100%;
+    max-width: 22rem;
+    border: 2px outset var(--white);
+    border-radius: 0.6rem;
+}
+
+/* Arrange the second group of event cards horizontally */
+.SecondEvents{
+    display: flex;
+    flex: 1;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 5%;
+}
+
+/* Add left padding to headings inside the event cards */
+.SecondEvents div h1{
+    padding-left: 5%;
+}
+
+/* Style event descriptions */
+.SecondEvents div p{
+    color: var(--white);
+    padding-left: 6%;
+    padding-bottom: 2.5rem;
+}
+
+/* Set the size and rounded top corners of event images */
+.SecondEvents div img{
+    height: auto;
+    width: 100%;
+    aspect-ratio: 70 / 60;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+    
+}
+
+/* Add borders and rounded corners to event cards */
+.SecondEvents div{
+    border: 2px solid var(--white);
+    border-radius: 2.5rem;
+    flex: 1 1 20rem;
+    max-width: 45%;
+
+}
+
+/* Style the footer with a gradient background */
+footer{
+    border: 2px solid var(--white);
+    background: linear-gradient(135deg,#000000 0%, #4B0082 50%, #FF6A00 100%);
+}
+
+/* Arrange footer content horizontally with space between items */
+.FooterB{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--white);
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 1.5rem;
+}
+
+/* Remove underlines from reference tags and set footer link colours */
+.FooterB div dl dd a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Add spacing below footer description list items */
+.FooterB div dl dd{
+    margin-bottom: 5%;
+}
+
+/* Underline footer links when hovered over */
+.FooterB div dl dd a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--white);
+}
+
+/* Style the registration button */
+.RegisterBtn{
+    display: flex;
+    color: var(--white);
+    margin-right: 19%;
+    margin-top: 3rem;
+    border: 1px solid var(--white);
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--orange);
+}
+
+/* Change the registration link background when hovered over */
+#RegBtn a span:hover{
+    background: linear-gradient(135deg,#000000 0%, #4B0082 50%, #FF6A00 100%);
+}
+
+/* Remove the underline from the registration link */
+#RegBtn a{
+    text-decoration: none;
+}
+
+/* Login page Styling */
+/* Centre and vertically arrange the form section content */
+.FormOrientation{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Arrange form elements vertically and set the form width */
+.FormBody form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 0 auto;
+    max-width: 25rem;
+    width: 85%;
+}
+
+/* This gives the form an orange border while the user is interacting with an input. */
+.FormBody form:has(input:focus) {
+    border: 2px solid var(--orange);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+
+/* Style the input fields inside the form */
+.FormBody form input{
+    height: 2.5rem;
+    border: 1px outset var(--white);
+    color: var(--white);
+    border-radius: 0.6rem;
+    background: transparent;
+    padding-left: 0.5rem;
+}
+
+/* Align form labels to the left and set their colour */
+.FormBody form label{
+    color: var(--white);
+    text-align: left;
+}
+
+/* Style the logo container */
+.Logo {
+    align-items: center;
+    gap: 1.8rem;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Style the logo container */
+.Logo i {
+    color: #FF8057;
+    font-size: 1.6rem;
+}
+
+/* Style all form error messages */
+#error1, #error2, #error3, #error4{
+    font-size: small;
+    padding: 0px;
+    margin: 0px;
+    color: red;
+}
+
+/* Style the ticket container and add to its gradient border and background */
+.Ticket{
+    margin-top: 6vh;
+    display: flex;
+    padding-left: 2%;
+    justify-content: left;
+    border: 2px inset;
+    border-image: linear-gradient(to right, white 50%, #FF6A00 100%) 1;
+    margin-inline: auto;
+    background: linear-gradient(to right, #554477, #6B568A);
+    width: 85%;
+    max-width: 32rem;
+    min-height: 11rem;
+    box-sizing: border-box;
+    
+}
+
+/* Arrange the contents of each ticket division vertically */
+.Ticket div{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Arrange customer details horizontally with spacing */
+#CustDetails{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+/* Position and rotate the ticket number */
+.Ticket #TicketNo{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 1.5rem;
+    position: relative;
+    color: silver;
+    transform: rotate(-90deg);
+}
+
+#MetaDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+    border: 2px inset var(--white);
+    background: linear-gradient(135deg, #FF6A00 -10%, #1A0B2E 30%, #4B0082 70%, #FF6A00 120%);
+    padding: 0.6rem 1.25rem 1.25rem 0.6rem;
+    border-radius: 1.25rem;
+}
+
+@media screen and (max-width: 400px) {
+
+    /* Reduce navigation spacing further */
+
+    .Main-Body nav ul {
+        gap: 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    /* Adjust heading */
+
+    .S1-Content h1 {
+        font-size: 1.7rem;
+    }
+
+    /* Adjust ticket dimensions */
+
+    .Ticket {
+        width: 98%;
+        padding: 0.5rem;
+    }
+
+    .Ticket #TicketNo {
+        font-size: 0.7rem;
+    }
+
+    #CustDetails {
+        gap: 0.4rem;
+    }
+}
+
+
